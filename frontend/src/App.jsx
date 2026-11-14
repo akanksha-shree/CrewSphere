@@ -125,7 +125,7 @@ const technical = {
   10: { kind: "Flow + Crews", pattern: "Human-in-the-loop approval", summary: "Research and writing crews prepare a report, but a human controls approval and can send it through revision again.", stack: ["CrewAI Flow", "CrewAI Crews", "Gemini free tier", "DuckDuckGo search", "Human feedback", "SQLite Flow persistence"], flow: ["Collect topic and audience", "Research Crew gathers source material", "Writing Crew drafts the report", "Human reviewer approves or requests revision", "Router checks the decision", "Approved: save final.md", "Revise: Revision Crew updates the draft and returns it for review"], decisions: ["Keep a human approval gate before publication", "Support a revision loop rather than a one-shot decision", "Persist workflow state for the approval process"], output: "final.md after approval" }
 };
 
-const DEFAULT_API = "https://crewai-bpy1.onrender.com";
+const DEFAULT_API = "https://crewsphere-ai-backend-v2.onrender.com";
 
 function App() {
   const [active, setActive] = useState(1);
