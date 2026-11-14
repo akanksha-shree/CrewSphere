@@ -1,0 +1,35 @@
+.env
+.venv/
+venv/
+node_modules/
+dist/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Environment and secrets
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+.pytest_cache/
+.mypy_cache/
+
+# Frontend
+.vite/
+coverage/
+
+# IDE and OS
+.vscode/
+.idea/
+Thumbs.db
+
+# Generated runtime outputs
+backend/outputs/
+
+# Frontend backup files
+frontend/src/*-backup*
+frontend/src/*-before-motion*
+frontend/src/*.backup
