@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import {
   Activity, ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Bot,
@@ -226,7 +226,16 @@ function App() {
       const output = data.output ?? JSON.stringify(data, null, 2);
       setResult(String(output));
       const id = String(output).match(/Draft ID:\s*([\w-]+)/i)?.[1];
-      if (id) setDraftId(id);
+
+      if (id) {
+        setDraftId(id);
+      } else if (path === "/agent10/review") {
+        setDraftId("");
+      }
+
+      if (path === "/agent10/review") {
+        setFeedback("");
+      }
       setHistory(h => [{
         id: active,
         name: agent.name,
